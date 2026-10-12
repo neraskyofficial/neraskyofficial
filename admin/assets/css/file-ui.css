@@ -1,0 +1,76 @@
+.file-picker-control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: .48rem;
+  border: 1px dashed #c8c9eb;
+  border-radius: 14px;
+  color: var(--muted);
+  background: linear-gradient(120deg, #fff, #faf9ff);
+  box-shadow: 0 2px 8px rgb(57 54 120 / 4%);
+  transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.file-picker-control:hover {
+  border-color: #9d98e8;
+  background: linear-gradient(120deg, #fff, #f7f5ff);
+  box-shadow: 0 7px 18px rgb(73 65 154 / 8%);
+}
+.file-picker-control:focus-visible {
+  border-color: var(--brand-500);
+  outline: 0;
+  box-shadow: 0 0 0 4px rgb(99 102 241 / 13%), 0 8px 22px rgb(73 65 154 / 8%);
+}
+.file-picker-control::file-selector-button {
+  margin-right: .7rem;
+  padding: .58rem .9rem;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(120deg, #635bdb, #8b5cf6 62%, #c052b9);
+  box-shadow: 0 5px 13px rgb(99 91 219 / 20%);
+  font: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 750;
+  cursor: pointer;
+  transition: filter .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.file-picker-control:hover::file-selector-button {
+  filter: saturate(1.15) brightness(1.04);
+  box-shadow: 0 7px 17px rgb(99 91 219 / 28%);
+  transform: translateY(-1px);
+}
+.file-picker-control:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+.file-picker-status {
+  display: block;
+  min-width: 0;
+  margin: .38rem .2rem 0;
+  overflow: hidden;
+  color: var(--faint);
+  font-size: var(--fs-xs);
+  line-height: 1.45;
+  text-overflow: ellipsis;
+}
+.file-picker-status.has-files {
+  color: var(--brand-700);
+  animation: file-picker-status-in .2s ease both;
+}
+@keyframes file-picker-status-in {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.file-picker-control.has-files {
+  border-style: solid;
+  border-color: #aaa4eb;
+  background: linear-gradient(120deg, #fbfaff, #f7f3ff);
+}
+@media (prefers-reduced-motion: reduce) {
+  .file-picker-control,
+  .file-picker-control::file-selector-button,
+  .file-picker-status.has-files {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

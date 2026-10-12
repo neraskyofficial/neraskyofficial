@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">Demo payment QR code</title>
+  <desc id="desc">This is a non-scannable demo QR placeholder for the Nerasky payment screen.</desc>
+  <rect width="220" height="220" rx="16" fill="#fff"/>
+  <rect x="12" y="12" width="196" height="196" rx="10" fill="#f1f3ff" stroke="#6366f1" stroke-width="4"/>
+  <g fill="#4f46e5">
+    <path d="M32 32h52v52H32zM42 42v32h32V42zM52 52h12v12H52z"/>
+    <path d="M136 32h52v52h-52zM146 42v32h32V42zM156 52h12v12h-12z"/>
+    <path d="M32 136h52v52H32zM42 146v32h32v-32zM52 156h12v12H52z"/>
+    <path d="M106 104h14v14h-14zM126 104h14v14h-14zM146 104h14v14h-14zM166 104h14v14h-14zM106 124h14v14h-14zM146 124h14v14h-14zM166 124h14v14h-14zM106 144h14v14h-14zM126 144h14v14h-14zM146 144h14v14h-14zM166 144h14v14h-14zM106 164h14v14h-14zM146 164h14v14h-14z"/>
+  </g>
+  <text x="110" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#4338ca">DEMO QR · NOT SCANNABLE</text>
+</svg>
